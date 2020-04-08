@@ -33,14 +33,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // cell for row at index path
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteThingCell")!
+        let favoriteThingForRow = self.favoriteThings[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = favoriteThingForRow
+
+        return cell
       // TODO: Implement method
       // 1. Dequeue a reusable cell from the table, using the correct “reuse identifier”
       // 2. Find the model object that corresponds to that row
       // 3. Set the images and labels in the cell with the data from the model object
       // 4. return the cell.
         
-        let placeholderCell = UITableViewCell()
-        return placeholderCell
+      //  let placeholderCell = UITableViewCell()
+      //  return placeholderCell
     }
 }
