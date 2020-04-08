@@ -13,6 +13,7 @@
 		4D673CA71A1BC5E200F01D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CA61A1BC5E200F01D25 /* Images.xcassets */; };
 		4D673CAA1A1BC5E200F01D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CA81A1BC5E200F01D25 /* LaunchScreen.xib */; };
 		B6312526243DFEB70048352F /* Villain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6312525243DFEB70048352F /* Villain.swift */; };
+		B6FD50F2243E5BAC007829B4 /* VillainDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD50F1243E5BAC007829B4 /* VillainDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D673CA61A1BC5E200F01D25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D673CA91A1BC5E200F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B6312525243DFEB70048352F /* Villain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villain.swift; sourceTree = "<group>"; };
+		B6FD50F1243E5BAC007829B4 /* VillainDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				4D673C9F1A1BC5E200F01D25 /* AppDelegate.swift */,
 				4D673CA11A1BC5E200F01D25 /* ViewController.swift */,
+				B6FD50F1243E5BAC007829B4 /* VillainDetailViewController.swift */,
+				B6312525243DFEB70048352F /* Villain.swift */,
 				4D673CA31A1BC5E200F01D25 /* Main.storyboard */,
 				4D673CA81A1BC5E200F01D25 /* LaunchScreen.xib */,
 				4D673CA61A1BC5E200F01D25 /* Images.xcassets */,
 				4D673C9D1A1BC5E200F01D25 /* Supporting Files */,
-				B6312525243DFEB70048352F /* Villain.swift */,
 			);
 			path = FavoriteThings;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				4D673CA21A1BC5E200F01D25 /* ViewController.swift in Sources */,
 				4D673CA01A1BC5E200F01D25 /* AppDelegate.swift in Sources */,
 				B6312526243DFEB70048352F /* Villain.swift in Sources */,
+				B6FD50F2243E5BAC007829B4 /* VillainDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
