@@ -13,19 +13,22 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Model
-    
+    // This array with favorite things. Then use this collection to populate your table.
     let favoriteThings: [String] = [
-        //TODO: Fill this array with your favorite things. Then use this collection to populate your table.
+        "Raindrops on roses",
+        "Whiskers on kittens",
+        "Bright copper kettles",
+        "Warm woolen mittens"
     ]
 
     // MARK: Table View Data Source Methods
     
     // number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
+      return self.favoriteThings.count
         // TODO: Implement this method to get the correct row count
-        let placeholderCount = 2
-        return placeholderCount
+  //      let placeholderCount = 2
+    //    return placeholderCount
     }
     
     // cell for row at index path
