@@ -13,40 +13,37 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-        // MARK: Properties
 
-        // Use this string property as your reuse identifier,
-        // Storyboard has been set up for you using this String.
-        let cellReuseIdentifier = "MyCellReuseIdentifier"
+            // MARK: Properties
 
-        // Choose some data to show in your table
+            // Get ahold of some villains, for the table
+            // This is an array of Villain instances
+            let allVillains = Villain.allVillains
 
-        let model = [
-            ["text" : "Do", "detail" : "A deer. A female deer."],
-            ["text" : "Re", "detail" : "A drop of golden sun."],
-            ["text" : "Mi", "detail" : "A name, I call myself."],
-            ["text" : "Fa", "detail" : "A long long way to run."],
-            ["text" : "So", "detail" : "A needle pulling thread."],
-            ["text" : "La", "detail" : "A note to follow So."],
-            ["text" : "Ti", "detail" : "A drink with jam and bread."]
-        ]
+            // MARK: Table View Data Source
 
-        // MARK: UITableViewDataSource
+            func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                return self.allVillains.count
+            }
 
-        // Add the two essential table data source methods here
+            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.model.count;
+                let cell = tableView.dequeueReusableCell(withIdentifier: "VillainCell")!
+                let villain = self.allVillains[(indexPath as NSIndexPath).row]
+
+                // Set the name and image
+                cell.textLabel?.text = villain.name
+                cell.imageView?.image = UIImage(named: villain.imageName)
+
+                // If the cell has a detail label, we will put the evil scheme in.
+                if let detailTextLabel = cell.detailTextLabel {
+                    detailTextLabel.text = "Scheme: \(villain.evilScheme)"
+                }
+
+                return cell
+            }
+
+            func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+                return true
+            }
         }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell =  tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier)!
-
-            let dictionary = self.model[(indexPath as NSIndexPath).row]
-
-            cell.textLabel?.text = dictionary["text"]
-            cell.detailTextLabel?.text = dictionary["detail"]
-
-            return cell
-        }
-    }
